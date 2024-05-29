@@ -1,2 +1,3 @@
 # Site-Web
-Um site web genérico para testar tecnologias html e css.
+Repositório para hospedar projetos de estudo relacionado ao curso "Formação Front-end - HTML, CSS, JavaScript, React e +"
+
