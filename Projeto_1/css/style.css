@@ -30,6 +30,10 @@ body {
   border-radius: 5px;
 }
 
+.highlight {
+  color: var(--highlight-color);
+}
+
 /* Header */
 .header {
   text-align: center;
