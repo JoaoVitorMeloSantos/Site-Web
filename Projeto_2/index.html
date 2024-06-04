@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Formulário</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h3 id="header-h3">Cadastro para Participação em Workshop de Tecnologia</h3>
+      </div>
+      <div class="form-container">
+        <div class="form-header">
+          <p>Formulário</p>
+        </div>
+        <div class="form-body">
+          <h1>Seja Bem-vindo(a)!</h1>
+          <p>Preencha as informações a seguir com sesu dados:</p>
+          <div class="box-input">
+            <form action="exemplo.js">
+              <label for="nome"
+                >Nome Completo: <span class="campo-obrigatorio">*</span></label
+              >
+              <input
+                type="text"
+                name="nome"
+                id="nome"
+                class="block"
+                placeholder="Digite seu nome completo!"
+                minlength="1"
+                maxlength="50"
+                required
+              />
+              <label for="email"
+                >Email: <span class="campo-obrigatorio">*</span></label
+              >
+              <input
+                type="email"
+                name="email"
+                id="email"
+                class="block"
+                placeholder="Digite seu endereço de email!"
+                required
+              />
+              <label for="telefone"
+                >Telefone: <span class="campo-obrigatorio">*</span></label
+              >
+              <input
+                type="text"
+                name="telefone"
+                id="telefone"
+                class="block"
+                placeholder="(xx)9xxxx-xxxx"
+                required
+              />
+              <label for="data-nascimento">Data de Nasciemnto: <span class="campo-obrigatorio">*</span></label>
+              <input type="date" name="data-nascimento" id="data-nascimento" class="block" required>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
