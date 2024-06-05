@@ -1,72 +1,118 @@
 /* Reset */
-*{
-    font-family: "Roboto", sans-serif;
-    padding: 0;
-    margin: 0;
+* {
+  font-family: "Roboto", sans-serif;
+  padding: 0;
+  margin: 0;
 }
 
 /* Variables */
 :root {
-    --body-bc: #f0ebf8;
-    --header-bc: #683ab6;
-    --form-container-bc: #fdfdfd;
-    --header-color: #fff;
-    --form-header-color: #b3a0e5;
-    --titles-color: #333;
-    --p-label-color: #444;
-
+  --body-bc: #f0ebf8;
+  --header-bc: #683ab6;
+  --form-container-bc: #fdfdfd;
+  --header-color: #fff;
+  --form-header-color: #b3a0e5;
+  --titles-color: #333;
+  --p-label-color: #444;
 }
 
 /* Generals */
 
 body {
-    background-color: var(--body-bc);
-}	
-
-.campo-obrigatorio{
-    color: red;
+  background-color: var(--body-bc);
 }
 
-h1, h2, h3, h4, h5, h6 {
-    color:  var(--titles-color);
+.campo-obrigatorio {
+  color: red;
 }
 
-p, label{
-    color: var(--p-label-color);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--titles-color);
 }
 
-input{
-    border: none;
-    border-bottom: 1px solid #ccc;
-    padding: 10px 0;
+p,
+label {
+  color: var(--p-label-color);
 }
 
-input[type="text"], input[type="email"], input[type="date"]{
-    width: 400px;
+input {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="file"] {
+  width: 400px;
 }
 
 /* Header */
 
-.header{
-    background-color: var(--header-bc);
-    color: var(--header-color);
-    padding: 20px 25px;
-    font-weight: 700;
-    font-size: 20px;
-    height: 160px;
+.header {
+  background-color: var(--header-bc);
+  color: var(--header-color);
+  padding: 20px 25px;
+  font-weight: 700;
+  font-size: 20px;
+  height: 160px;
 }
 
-#header-h3{
-    color: #fff;
-    margin-top: 0;
+#header-h3 {
+  color: #fff;
+  margin-top: 0;
 }
 
 /* Form-container */
 
 .form-container {
-    width: 60%;
-    margin: 0px auto;
-    background-color: var(--form-container-bc);
-    position: relative;
-    top: -62px;
+  width: 60%;
+  margin: 0px auto;
+  background-color: var(--form-container-bc);
+  position: relative;
+  top: -62px;
+}
+
+.block {
+  display: block;
+}
+
+.radio-div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.radioColumn {
+  display: block;
+  margin: 10px;
+  flex: 1;
+}
+
+.radio {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.radio label {
+  margin-left: 5px;
+}
+
+.checkbox-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.checkbox {
+  margin-right: 20px;
+}
+
+.checkbox label {
+  margin-left: 3px;
 }
