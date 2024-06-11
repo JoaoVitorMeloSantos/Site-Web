@@ -14,6 +14,7 @@
   --form-header-color: #b3a0e5;
   --titles-color: #333;
   --p-label-color: #444;
+  --form-header-boder: #ccc;
 }
 
 /* Generals */
@@ -49,8 +50,29 @@ input {
 input[type="text"],
 input[type="email"],
 input[type="date"],
-input[type="file"] {
-  width: 400px;
+input[type="file"],
+textarea {
+  width: 500px;
+  margin-bottom: 13px;
+}
+
+select {
+  margin-bottom: 13px;
+  margin-top: 8px;
+}
+
+textarea {
+  padding: 10px 5px;
+  margin-bottom: 13px;
+  margin-top: 8px;
+}
+
+input[type="radio"]{
+  margin-top: 20px;
+}
+
+input[type="file"]{
+  margin-top: 20px;
 }
 
 /* Header */
@@ -69,12 +91,53 @@ input[type="file"] {
   margin-top: 0;
 }
 
+/* Form Header */
+
+.form-header p {
+  color: var(--header-bc);
+  border-bottom: 2px solid var(--header-bc);
+  text-align: center;
+  font-weight: 300;
+  font-size: 22px;
+  text-transform: uppercase;
+  width: 150px;
+  margin: 0 auto;
+  height: 45px;
+  line-height: 45px;
+}
+
+.form-header {
+  border-bottom: 1px solid var(--form-header-boder);
+  height: 45px;
+}
+
+/* Form Body */
+
+.form-body {
+  padding: 35px 45px;
+}
+
+.form-body h1 {
+  margin-bottom: 15px;
+}
+
+.form-body p {
+  margin-bottom: 20px;
+}
+
+/* Box Input */
+
+.box-input {
+  margin-bottom: 35px;
+}
+
 /* Form-container */
 
 .form-container {
   width: 60%;
   margin: 0px auto;
   background-color: var(--form-container-bc);
+  border-radius: 2px;
   position: relative;
   top: -62px;
 }
@@ -83,36 +146,43 @@ input[type="file"] {
   display: block;
 }
 
-.radio-div {
-  display: flex;
-  justify-content: space-between;
+/* Checkbox UL */
+
+.ul-checkbox {
+  display: inline-block;
+  margin: 0 30px 30px 0;
 }
 
-.radioColumn {
-  display: block;
-  margin: 10px;
-  flex: 1;
+.ul-checkbox li {
+  list-style: none;
+  padding: 0 0 5px 0;
 }
 
-.radio {
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
+/* Radio */
+
+.radio{
+  height: 30px;
 }
 
-.radio label {
-  margin-left: 5px;
+/* Submit */
+
+input[type="submit"] {
+  width: 90px;
+  height: 30px;
+  border: 2px solid var(--header-bc);
+  background-color: var(--header-bc);
+  color: var(--header-color);
+  border-radius: 5px;
+  transition: .5s;
+  font-weight: 500;
+  font-size: 13px;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 0;
+  line-height: 30px;
 }
 
-.checkbox-container {
-  display: flex;
-  flex-direction: row;
-}
-
-.checkbox {
-  margin-right: 20px;
-}
-
-.checkbox label {
-  margin-left: 3px;
+input[type="submit"]:hover {
+  background-color: var(--header-color);
+  color: var(--header-bc);
 }

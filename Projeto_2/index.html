@@ -28,8 +28,8 @@
         <div class="form-body">
           <h1>Seja Bem-vindo(a)!</h1>
           <p>Preencha as informações a seguir com sesu dados:</p>
-          <div class="box-input">
-            <form action="exemplo.js">
+          <form action="exemplo.js">
+            <div class="box-input">
               <label for="nome"
                 >Nome Completo: <span class="campo-obrigatorio">*</span></label
               >
@@ -40,9 +40,11 @@
                 class="block"
                 placeholder="Digite seu nome completo!"
                 minlength="1"
-                maxlength="50"
+                maxlength="65"
                 required
               />
+            </div>
+            <div class="box-input">
               <label for="email"
                 >Email: <span class="campo-obrigatorio">*</span></label
               >
@@ -54,6 +56,8 @@
                 placeholder="Digite seu endereço de email!"
                 required
               />
+            </div>
+            <div class="box-input">
               <label for="telefone"
                 >Telefone: <span class="campo-obrigatorio">*</span></label
               >
@@ -65,6 +69,8 @@
                 placeholder="(xx)9xxxx-xxxx"
                 required
               />
+            </div>
+            <div class="box-input">
               <label for="data-nascimento"
                 >Data de Nasciemnto:
                 <span class="campo-obrigatorio">*</span></label
@@ -76,6 +82,8 @@
                 class="block"
                 required
               />
+            </div>
+            <div class="box-input">
               <label for="ocupação"
                 >Ocupação: <span class="campo-obrigatorio">*</span></label
               >
@@ -84,8 +92,10 @@
                 <option value="profissionalArea">Profissional da Área</option>
                 <option value="professor">Professor</option>
                 <option value="pesquisador">Pesquisador</option>
-                <option value="outro">Outro</option>
+                <option value="outro(a)">Outro</option>
               </select>
+            </div>
+            <div class="box-input">
               <label for="empresa"
                 >Empresa ou instituição:
                 <span class="campo-obrigatorio">*</span></label
@@ -94,8 +104,13 @@
                 type="text"
                 name="empresa"
                 placeholder="Nome da empresa ou instituição onde trabalha ou estuda"
+                class="block"
+                minlength="1"
+                maxlength="65"
                 required
               />
+            </div>
+            <div class="box-input">
               <label for="atuação">Área de Atuação:</label>
               <select name="atuação" id="atuação" class="block">
                 <option value="desenvolvedor">
@@ -106,83 +121,87 @@
                 <option value="cienciaDados">Ciência de Dados</option>
                 <option value="outras">Outras</option>
               </select>
-              <label for="interesses">Tópicos de Interesse:</label>
-              <div class="radio-div">
-                <div class="radioColumn">
-                  <div class="radio">
-                    <input
-                      type="checkbox"
-                      name="interesses[]"
-                      id="inteligenciaArtificial"
-                      value="inteligenciaArtificial"
-                    />
-                    <label for="inteligenciaArtificial"
-                      >Inteligência Artificial</label
-                    >
-                  </div>
-                  <div class="radio">
-                    <input
-                      type="checkbox"
-                      name="interesses[]"
-                      id="desenvolvimentoWeb"
-                      value="desenvolvimentoWeb"
-                    />
-                    <label for="desenvolvimentoWeb">Desenvolvimento Web</label>
-                  </div>
-                  <div class="radio">
-                    <input
-                      type="checkbox"
-                      name="interesses[]"
-                      id="segurançaInformacao"
-                      value="segurançaInformacao"
-                    />
-                    <label for="segurançaInformacao"
-                      >Segurança da Informação</label
-                    >
-                  </div>
-                </div>
-                <div class="radioColumn">
-                  <div class="radio">
-                    <input
-                      type="checkbox"
-                      name="interesses[]"
-                      id="bigData"
-                      value="bigData"
-                    />
-                    <label for="bigData">Big Data</label>
-                  </div>
-                  <div class="radio">
-                    <input
-                      type="checkbox"
-                      name="interesses[]"
-                      id="computacaoNuvem"
-                      value="computacaoNuvem"
-                    />
-                    <label for="computacaoNuvem">Computação em Nuvem</label>
-                  </div>
-                  <div class="radio">
-                    <input
-                      type="checkbox"
-                      name="interesses[]"
-                      id="internetCoisas"
-                      value="internetCoisas"
-                    />
-                    <label for="internetCoisas">Internet das Coisas</label>
-                  </div>
-                </div>
-              </div>
+            </div>
+            <p>Tópicos de Interesse:</p>
+            <ul class="ul-checkbox">
+              <li>
+                <input
+                  type="checkbox"
+                  name="interesses[]"
+                  id="inteligenciaArtificial"
+                  value="inteligenciaArtificial"
+                />
+                <label for="inteligenciaArtificial"
+                  >Inteligência Artificial</label
+                >
+              </li>
+              <li>
+                <input
+                  type="checkbox"
+                  name="interesses[]"
+                  id="desenvolvimentoWeb"
+                  value="desenvolvimentoWeb"
+                />
+                <label for="desenvolvimentoWeb">Desenvolvimento Web</label>
+              </li>
+              <li>
+                <input
+                  type="checkbox"
+                  name="interesses[]"
+                  id="segurançaInformacao"
+                  value="segurançaInformacao"
+                />
+                <label for="segurançaInformacao">Segurança da Informação</label>
+              </li>
+            </ul>
+            <ul class="ul-checkbox">
+              <li>
+                <input
+                  type="checkbox"
+                  name="interesses[]"
+                  id="bigData"
+                  value="bigData"
+                />
+                <label for="bigData">Big Data</label>
+              </li>
+              <li>
+                <input
+                  type="checkbox"
+                  name="interesses[]"
+                  id="computacaoNuvem"
+                  value="computacaoNuvem"
+                />
+                <label for="computacaoNuvem">Computação em Nuvem</label>
+              </li>
+              <li>
+                <input
+                  type="checkbox"
+                  name="interesses[]"
+                  id="internetCoisas"
+                  value="internetCoisas"
+                />
+                <label for="internetCoisas">Internet das Coisas</label>
+              </li>
+            </ul>
+            <div class="box-input">
               <label for="experiencia">Experiência Prévia:</label>
               <textarea
                 name="experiencia"
                 id="experiencia"
                 class="block"
+                placeholder="Descreva sua experiência prévia nos tópicos de interesse"
               ></textarea>
+            </div>
+            <div class="box-input">
               <label for="expectativas">Expectativas:</label>
               <textarea
                 name="expectativas"
                 id="expectativas"
                 class="block"
+                placeholder="Escreva suas expectativas em relação ao workshop"
               ></textarea>
+            </div>
+            <div class="box-input">
               <label for="horario">Horário Preferido:</label>
               <div class="radio">
                 <input type="radio" name="horario" id="manha" value="manha" />
@@ -196,29 +215,33 @@
                 <input type="radio" name="horario" id="noite" value="noite" />
                 <label for="manha">Noite</label>
               </div>
-              <label for="dias">Dias Disponíveis:</label>
-              <div class="checkbox-container">
-                <div class="checkbox">
-                  <input type="checkbox" name="segunda" value="segunda" />
-                  <label for="segunda">Segunda-feira</label>
-                </div>
-                <div class="checkbox">
-                  <input type="checkbox" name="terça" value="terça" />
-                  <label for="terça">Terça-feira</label>
-                </div>
-                <div class="checkbox">
-                  <input type="checkbox" name="quarta" value="quarta" />
-                  <label for="quarta">Quarta-feira</label>
-                </div>
-                <div class="checkbox">
-                  <input type="checkbox" name="quinta" value="quinta" />
-                  <label for="quinta">Quinta-feira</label>
-                </div>
-                <div class="checkbox">
-                  <input type="checkbox" name="sexta" value="sexta" />
-                  <label for="sexta">Sexta-feira</label>
-                </div>
-              </div>
+            </div>
+            <p>Dias Disponíveis:</p>
+            <ul class="ul-checkbox">
+              <li>
+                <input type="checkbox" name="segunda" value="segunda" />
+                <label for="segunda">Segunda-feira</label>
+              </li>
+              <li>
+                <input type="checkbox" name="terça" value="terça" />
+                <label for="terça">Terça-feira</label>
+              </li>
+              <li>
+                <input type="checkbox" name="quarta" value="quarta" />
+                <label for="quarta">Quarta-feira</label>
+              </li>
+            </ul>
+            <ul class="ul-checkbox">
+              <li>
+                <input type="checkbox" name="quinta" value="quinta" />
+                <label for="quinta">Quinta-feira</label>
+              </li>
+              <li>
+                <input type="checkbox" name="sexta" value="sexta" />
+                <label for="sexta">Sexta-feira</label>
+              </li>
+            </ul>
+            <div class="box-input">
               <label for="modo"
                 >Modo de Participação:
                 <span class="campo-obrigatorio">*</span></label
@@ -236,30 +259,50 @@
                 />
                 <label for="presencial">Presencial</label>
               </div>
+            </div>
+            <div class="box-input">
               <label for="comentarios">Comentários/Sugestões:</label>
               <textarea
                 name="comentarios"
                 id="comentarios"
                 class="block"
+                placeholder="Adicione quaisquer comentários ou sugestões"
               ></textarea>
+            </div>
+            <div class="box-input">
               <label for="recomendacoes">Recomendações de Palestrantes:</label>
               <textarea
                 name="recomendacoes"
                 id="recomendacoes"
                 class="block"
+                placeholder="Sugira nomes de palestrantes ou especialistas que gostaria de ver no workshop"
               ></textarea>
+            </div>
+            <div class="box-input">
               <label for="arquivo"
-                >Insira um documento contendo o frente e verso de sua
-                identidade:</label
+                >Insira uma imagem do seu documento de identidade contendo a
+                frente e o verso:</label
               >
-              <input type="file" name="arquivo" id="arquivo" class="block" />
+              <input
+                type="file"
+                accept="image/jpg, image/png"
+                name="identidade"
+                id="identidade"
+                class="block"
+                multiple
+              />
+            </div>
+            <div class="box-input">
               <label for="contrato">Você Aceita os Termos e Condições:</label>
-              <select name="contrato" id="contrato">
+              <select name="contrato" id="contrato" class="block">
                 <option value="sim">Sim</option>
                 <option value="nao" selected>Não</option>
               </select>
-            </form>
-          </div>
+            </div>
+            <div class="box-input">
+              <input type="submit" value="enviar" class="block" id="enviar" />
+            </div>
+          </form>
         </div>
       </div>
     </div>
