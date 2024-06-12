@@ -65,13 +65,14 @@ textarea {
   padding: 10px 5px;
   margin-bottom: 13px;
   margin-top: 8px;
+  resize: none;
 }
 
-input[type="radio"]{
+input[type="radio"] {
   margin-top: 20px;
 }
 
-input[type="file"]{
+input[type="file"] {
   margin-top: 20px;
 }
 
@@ -160,7 +161,7 @@ input[type="file"]{
 
 /* Radio */
 
-.radio{
+.radio {
   height: 30px;
 }
 
@@ -169,12 +170,12 @@ input[type="file"]{
 input[type="submit"] {
   width: 90px;
   height: 30px;
+  font-weight: bold;
   border: 2px solid var(--header-bc);
   background-color: var(--header-bc);
   color: var(--header-color);
   border-radius: 5px;
-  transition: .5s;
-  font-weight: 500;
+  transition: 0.5s;
   font-size: 13px;
   text-transform: uppercase;
   cursor: pointer;

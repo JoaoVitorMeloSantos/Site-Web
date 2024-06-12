@@ -27,7 +27,7 @@
         </div>
         <div class="form-body">
           <h1>Seja Bem-vindo(a)!</h1>
-          <p>Preencha as informações a seguir com sesu dados:</p>
+          <p>Preencha as informações a seguir com seus dados:</p>
           <form action="exemplo.js">
             <div class="box-input">
               <label for="nome"
@@ -72,7 +72,7 @@
             </div>
             <div class="box-input">
               <label for="data-nascimento"
-                >Data de Nasciemnto:
+                >Data de Nascimento:
                 <span class="campo-obrigatorio">*</span></label
               >
               <input
@@ -84,15 +84,15 @@
               />
             </div>
             <div class="box-input">
-              <label for="ocupação"
+              <label for="ocupacao"
                 >Ocupação: <span class="campo-obrigatorio">*</span></label
               >
-              <select name="ocupação" id="ocupação" class="block" required>
+              <select name="ocupacao" id="ocupacao" class="block" required>
                 <option value="estudante">Estudante</option>
                 <option value="profissionalArea">Profissional da Área</option>
                 <option value="professor">Professor</option>
                 <option value="pesquisador">Pesquisador</option>
-                <option value="outro(a)">Outro</option>
+                <option value="outro">Outro</option>
               </select>
             </div>
             <div class="box-input">
@@ -103,21 +103,22 @@
               <input
                 type="text"
                 name="empresa"
-                placeholder="Nome da empresa ou instituição onde trabalha ou estuda"
+                id="empresa"
                 class="block"
+                placeholder="Nome da empresa ou instituição onde trabalha ou estuda"
                 minlength="1"
                 maxlength="65"
                 required
               />
             </div>
             <div class="box-input">
-              <label for="atuação">Área de Atuação:</label>
-              <select name="atuação" id="atuação" class="block">
-                <option value="desenvolvedor">
+              <label for="atuacao">Área de Atuação:</label>
+              <select name="atuacao" id="atuacao" class="block">
+                <option value="desenvolvimento">
                   Desenvolvimento de Software
                 </option>
                 <option value="redes">Redes e Infraestrutura</option>
-                <option value="segurança">Segurança da Informação</option>
+                <option value="seguranca">Segurança da Informação</option>
                 <option value="cienciaDados">Ciência de Dados</option>
                 <option value="outras">Outras</option>
               </select>
@@ -148,10 +149,10 @@
                 <input
                   type="checkbox"
                   name="interesses[]"
-                  id="segurançaInformacao"
-                  value="segurançaInformacao"
+                  id="segurancaInformacao"
+                  value="segurancaInformacao"
                 />
-                <label for="segurançaInformacao">Segurança da Informação</label>
+                <label for="segurancaInformacao">Segurança da Informação</label>
               </li>
             </ul>
             <ul class="ul-checkbox">
@@ -190,6 +191,7 @@
                 id="experiencia"
                 class="block"
                 placeholder="Descreva sua experiência prévia nos tópicos de interesse"
+                required
               ></textarea>
             </div>
             <div class="box-input">
@@ -199,6 +201,7 @@
                 id="expectativas"
                 class="block"
                 placeholder="Escreva suas expectativas em relação ao workshop"
+                required
               ></textarea>
             </div>
             <div class="box-input">
@@ -209,51 +212,77 @@
               </div>
               <div class="radio">
                 <input type="radio" name="horario" id="tarde" value="tarde" />
-                <label for="manha">Tarde</label>
+                <label for="tarde">Tarde</label>
               </div>
               <div class="radio">
                 <input type="radio" name="horario" id="noite" value="noite" />
-                <label for="manha">Noite</label>
+                <label for="noite">Noite</label>
               </div>
             </div>
             <p>Dias Disponíveis:</p>
             <ul class="ul-checkbox">
               <li>
-                <input type="checkbox" name="segunda" value="segunda" />
+                <input
+                  type="checkbox"
+                  name="diasDisponiveis[]"
+                  id="segunda"
+                  value="segunda"
+                />
                 <label for="segunda">Segunda-feira</label>
               </li>
               <li>
-                <input type="checkbox" name="terça" value="terça" />
-                <label for="terça">Terça-feira</label>
+                <input
+                  type="checkbox"
+                  name="diasDisponiveis[]"
+                  id="terca"
+                  value="terca"
+                />
+                <label for="terca">Terça-feira</label>
               </li>
               <li>
-                <input type="checkbox" name="quarta" value="quarta" />
+                <input
+                  type="checkbox"
+                  name="diasDisponiveis[]"
+                  id="quarta"
+                  value="quarta"
+                />
                 <label for="quarta">Quarta-feira</label>
               </li>
             </ul>
             <ul class="ul-checkbox">
               <li>
-                <input type="checkbox" name="quinta" value="quinta" />
+                <input
+                  type="checkbox"
+                  name="diasDisponiveis[]"
+                  id="quinta"
+                  value="quinta"
+                />
                 <label for="quinta">Quinta-feira</label>
               </li>
               <li>
-                <input type="checkbox" name="sexta" value="sexta" />
+                <input
+                  type="checkbox"
+                  name="diasDisponiveis[]"
+                  id="sexta"
+                  value="sexta"
+                />
                 <label for="sexta">Sexta-feira</label>
               </li>
             </ul>
             <div class="box-input">
               <label for="modo"
                 >Modo de Participação:
-                <span class="campo-obrigatorio">*</span></label
-              >
+              </label>
               <div class="radio">
-                <input type="radio" name="online" id="online" value="online" />
-                <label for="online">Online</label>
+                <input type="radio" name="modo" id="online" value="online" />
+                <label for="online"
+                  >Online
+                </label>
               </div>
               <div class="radio">
                 <input
                   type="radio"
-                  name="presencial"
+                  name="modo"
                   id="presencial"
                   value="presencial"
                 />
@@ -261,46 +290,53 @@
               </div>
             </div>
             <div class="box-input">
-              <label for="comentarios">Comentários/Sugestões:</label>
+              <label for="comentarios"
+                >Comentários/Sugestões:
+                <span class="campo-obrigatorio">*</span></label
+              >
               <textarea
                 name="comentarios"
                 id="comentarios"
                 class="block"
                 placeholder="Adicione quaisquer comentários ou sugestões"
+                required
               ></textarea>
             </div>
             <div class="box-input">
-              <label for="recomendacoes">Recomendações de Palestrantes:</label>
+              <label for="recomendacoes"
+                >Recomendações de Palestrantes:
+                <span class="campo-obrigatorio">*</span></label
+              >
               <textarea
                 name="recomendacoes"
                 id="recomendacoes"
                 class="block"
                 placeholder="Sugira nomes de palestrantes ou especialistas que gostaria de ver no workshop"
+                required
               ></textarea>
             </div>
             <div class="box-input">
-              <label for="arquivo"
-                >Insira uma imagem do seu documento de identidade contendo a
-                frente e o verso:</label
-              >
+              <label for="anexar-curriculo">Anexar Currículo:</label>
               <input
                 type="file"
-                accept="image/jpg, image/png"
-                name="identidade"
-                id="identidade"
+                name="anexar-curriculo"
+                id="anexar-curriculo"
                 class="block"
                 multiple
+                required
               />
             </div>
             <div class="box-input">
-              <label for="contrato">Você Aceita os Termos e Condições:</label>
-              <select name="contrato" id="contrato" class="block">
-                <option value="sim">Sim</option>
-                <option value="nao" selected>Não</option>
-              </select>
+              <input
+                type="checkbox"
+                name="aceite-termos"
+                id="aceite-termos"
+                required
+              />
+              <label for="aceite-termos">Eu aceito os termos e condições</label>
             </div>
             <div class="box-input">
-              <input type="submit" value="enviar" class="block" id="enviar" />
+              <input type="submit" value="Enviar" />
             </div>
           </form>
         </div>
