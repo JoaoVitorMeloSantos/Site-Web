@@ -81,7 +81,7 @@ nav{
 }
 
 .logo {
-    width: 50px;
+    width: 60px;
     margin-top: 15px;
 }
 
@@ -89,9 +89,39 @@ nav{
 
 .main_container{
     width: 100%;
-    background-image: url("../img/cidade.jpg");
+    background-image: url("../img/praia.jpg");
     background-size: cover;
     background-position: center;
     padding: 10rem 0;
+}
 
+.main_container h1, .main_container p{
+    text-align: center;
+    color: var(--nav-color);
+    font-weight: bold;
+    text-shadow: #000 3px 2px 3px;
+    font-size: 54px;
+}
+
+.main_container p{
+    font-size: 32px;
+}
+
+/* Services */
+
+.services_container{
+    padding: 5rem 0;    
+}
+
+.services_container ul{
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.services_container li{
+    flex: 1 1 200px;
+    list-style: none;
+    text-align: center;
+    padding: 20px;
 }
